@@ -8,7 +8,7 @@ void main()
     int a[50],n,i;
     printf("enter the size of array: ");
     scanf("%d",&n);
-    printf("enter the value into the array: ");
+    printf("\nenter the value into the array: ");
     for(i=0;i<n;i++)
     {
         scanf("%d",&a[i]);
@@ -16,4 +16,22 @@ void main()
     reverse(a,n);
     delete(a,n);
 
+}
+void reverse(int a[50],int n)
+{
+    int i;
+    printf("\n\nreverse of array is: ");
+    for(i=n-1;i>0;i--)
+    {
+        printf(" %d",a[i]);
+    }
+}
+void delete(int a[50],int n)
+{
+    int i;
+    printf("\n\nreverse of array is: ");
+    for(i=n-1;i>0;i--)
+    {
+        printf(" %d",a[i]);
+    }
 }
