@@ -9,7 +9,7 @@ void main()
     printf("enter the size of array: ");
     scanf("%d",&n);
     printf("\nenter the value into the array: ");
-    for(i=0;i<n;i++)
+    for(i=1;i<=n;i++)
     {
         scanf("%d",&a[i]);
     }
@@ -21,7 +21,7 @@ void reverse(int a[50],int n)
 {
     int i;
     printf("\n\nreverse of array is: ");
-    for(i=n-1;i>0;i--)
+    for(i=n;i>=1;i--)
     {
         printf(" %d",a[i]);
     }
@@ -35,15 +35,16 @@ void delete(int a[50],int n)
     {
         key=a[loc];
         printf("\n\nthe deleted element is : %d",key);
-    for(i=loc;i<n;i++)
+    for(i=loc;i<=n;i++)
     {
-        a[i]=a[loc+1];
+        a[i]=a[i+1];
     }
     printf("\nafter deletion the array is: ");
-    for(i=0;i<n;i++)
+    for(i=1;i<=n;i++)
     {
         printf(" %d",a[i]);
     }
+    printf("\n");
     }
     else{
         printf("out of memory");
