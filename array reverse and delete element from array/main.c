@@ -38,6 +38,10 @@ void delete(int a[50],int n)
     for(i=loc;i<n;i++)
     {
         a[i]=a[loc+1];
+    }
+    printf("\nafter deletion the array is: ");
+    for(i=0;i<n;i++)
+    {
         printf(" %d",a[i]);
     }
     }
