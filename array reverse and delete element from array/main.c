@@ -28,10 +28,20 @@ void reverse(int a[50],int n)
 }
 void delete(int a[50],int n)
 {
-    int i;
-    printf("\n\nreverse of array is: ");
-    for(i=n-1;i>0;i--)
+    int i,loc,key;
+    printf("\n\nenter the location that you want to delete the element :  ");
+    scanf("%d",&loc);
+    if(loc<=n)
     {
+        key=a[loc];
+        printf("\n\nthe deleted element is : %d",key);
+    for(i=loc;i<n;i++)
+    {
+        a[i]=a[loc+1];
         printf(" %d",a[i]);
+    }
+    }
+    else{
+        printf("out of memory");
     }
 }
