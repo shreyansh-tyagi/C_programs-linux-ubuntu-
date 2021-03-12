@@ -26,5 +26,9 @@ exit(1);
 //printf("shreyansh you are successfully connected to mysql server\n\n");
 mysql_query(conn,"select * from e_data");
 res=mysql_store_result(conn);
+while(row=mysql_fetch_row(res))
+{
+    
+}
 return EXIT_SUCCESS;
 }
