@@ -29,6 +29,8 @@ mysql_query(conn,"select * from clothes");
 res=mysql_store_result(conn);
 while(col=mysql_fetch_row(res))
 {
+    printf("%s\n",col[0]);
+
 
 }
 mysql_free_result(res);
