@@ -29,9 +29,9 @@ mysql_query(conn,"use employee");
 mysql_query(conn,"delete from e_data where e_name='shreyansh'");
 mysql_query(conn,"delete from e_data where e_name ='david'");
 //mysql_query(conn,"insert into e_data values(4,'shrey','paris',22,'male',124000,'data scientist')");
-mysql_query(conn,"insert into e_data values(7,'shanaya','london',22,'female',134231,'senior data scientist')");
+//mysql_query(conn,"insert into e_data values(7,'shanaya','london',22,'female',134231,'senior data scientist')");
 //mysql_query(conn,"select * from e_data where e_salary between 40000 and 50000");
-mysql_query(conn,"select * from e_data");
+mysql_query(conn,"select e_name,e_salary,e_dept from e_data where e_gender='male' and e_salary>100000");
 res=mysql_store_result(conn);
 while(col=mysql_fetch_row(res))
 {
