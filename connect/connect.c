@@ -30,7 +30,7 @@ while(row=mysql_fetch_row(res))
 {
     printf("%s/t%s/t%s/n",row[0],row[1],row[2]);
 }
-mysq_free_result(res);
+mysql_free_result(res);
 mysql_close(conn);
 return EXIT_SUCCESS;
 }
