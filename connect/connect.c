@@ -36,7 +36,8 @@ res=mysql_store_result(conn);
 while(col=mysql_fetch_row(res))
 {
     //printf("%s\t\t%s\t\t%s\t\t%s\t\t%s\t\t%s\t\t%s\t\n\n",col[0],col[1],col[2],col[3],col[4],col[5],col[6]);
-    printf("%s\t%s\t\n%s\n\n",col[0],col[1],col[2]);
+    printf("Name\tSalary\tDepartment\t\n\n");
+    printf("%s\t%s\t%s\n\n",col[0],col[1],col[2]);
 }
 mysql_free_result(res);
 mysql_close(conn);
