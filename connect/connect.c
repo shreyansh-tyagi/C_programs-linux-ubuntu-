@@ -27,7 +27,7 @@ printf("HELLO SHREYANSH!----- you are successfully connected to mysql server----
 mysql_query(conn,"use employee");
 //mysql_query(conn,"select e_name,e_salary from e_data");
 mysql_query(conn,"delete from e_data where e_name='shreyansh'");
-my
+mysql_query(conn,"delete from e_data where e_name =david");
 //mysql_query(conn,"select * from e_data where e_salary between 40000 and 50000");
 mysql_query(conn,"select * from e_data");
 res=mysql_store_result(conn);
