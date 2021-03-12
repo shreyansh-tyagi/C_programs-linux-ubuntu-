@@ -24,6 +24,7 @@ fprintf(stderr,"\nError: %s [%d]\n", mysql_error(conn),mysql_errno(conn));
 exit(1);
 }
 //printf("shreyansh you are successfully connected to mysql server\n\n");
+mysql_query(conn,"use employee");
 mysql_query(conn,"select * from e_data");
 res=mysql_store_result(conn);
 while(row=mysql_fetch_row(res))
