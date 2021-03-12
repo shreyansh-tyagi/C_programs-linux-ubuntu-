@@ -31,13 +31,15 @@ mysql_query(conn,"delete from e_data where e_name ='david'");
 //mysql_query(conn,"insert into e_data values(4,'shrey','paris',22,'male',124000,'data scientist')");
 //mysql_query(conn,"insert into e_data values(7,'shanaya','london',22,'female',134231,'senior data scientist')");
 //mysql_query(conn,"select * from e_data where e_salary between 40000 and 50000");
-mysql_query(conn,"select e_name,e_salary,e_dept from e_data where e_gender='male' and e_salary>100000");
+//mysql_query(conn,"select e_name,e_salary,e_dept from e_data where e_gender='male' and e_salary>100000");
+mysql_query(conn,"select * from e_data");
 res=mysql_store_result(conn);
+printf("\nID\t\tNAME\t\tADDRESS\t\tAGE\t\tGENDER\t\tSALARY\t\tDEPARTMENT\t\n\n");
 while(col=mysql_fetch_row(res))
 {
-    //printf("%s\t\t%s\t\t%s\t\t%s\t\t%s\t\t%s\t\t%s\t\n\n",col[0],col[1],col[2],col[3],col[4],col[5],col[6]);
-    printf("Name\tSalary\tDepartment\t\n\n");
-    printf("%s\t%s\t%s\n\n",col[0],col[1],col[2]);
+    printf("%s\t\t%s\t\t%s\t\t%s\t\t%s\t\t%s\t\t%s\t\n\n",col[0],col[1],col[2],col[3],col[4],col[5],col[6]);
+   // printf("Name\tSalary\tDepartment\t\n\n");
+    //printf("%s\t%s\t%s\n\n",col[0],col[1],col[2]);
 }
 mysql_free_result(res);
 mysql_close(conn);
