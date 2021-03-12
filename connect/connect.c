@@ -3,7 +3,7 @@
 #include<mysql/mysql.h>
 
 
-static char *host="localhost";
+static char *host="local";
 static char *user="root";
 static char *pass="mythemiz1524";
 static char *db="operator";
