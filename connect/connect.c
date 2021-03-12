@@ -25,12 +25,14 @@ exit(1);
 }
 //printf("shreyansh you are successfully connected to mysql server\n\n");
 mysql_query(conn,"use employee");
-mysql_query(conn,"select e_name,e_salary from e_data");
+//mysql_query(conn,"select e_name,e_salary from e_data");
+mysql_query(conn,"select * from e_data");
+mysq_query(conn,"delete from e_data where e_name='shreyansh' and 'david'");
 res=mysql_store_result(conn);
 while(row=mysql_fetch_row(res))
 {
     //printf("%s\t\t%s\t\t%s\t\t%s\t\t%s\t\t%s\t\t%s\t\n\n",row[0],row[1],row[2],row[3],row[4],row[5],row[6]);
-    printf("%s\t%s\t",row[0],row[1]);
+    printf("%s\t%s\t\n",row[0],row[1]);
 }
 mysql_free_result(res);
 mysql_close(conn);
