@@ -23,10 +23,11 @@ if(!(mysql_real_connect(conn,host,user,pass,db,port,unix_socket,flag)))
 fprintf(stderr,"\nError: %s [%d]\n", mysql_error(conn),mysql_errno(conn));
 exit(1);
 }
-//printf("shreyansh you are successfully connected to mysql server\n\n");
+printf("HELLO SHREYANSH!----- you are successfully connected to mysql server------\n\n");
 mysql_query(conn,"use employee");
 //mysql_query(conn,"select e_name,e_salary from e_data");
 mysql_query(conn,"delete from e_data where e_name='shreyansh'");
+my
 //mysql_query(conn,"select * from e_data where e_salary between 40000 and 50000");
 mysql_query(conn,"select * from e_data");
 res=mysql_store_result(conn);
