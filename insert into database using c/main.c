@@ -17,6 +17,9 @@ int main()
 MYSQL *conn;
 MYSQL_RES *res;
 MYSQL_ROW col;
+char name[50];
+printf("\nenter the name: ");
+scanf("%s",name);
 conn=mysql_init(NULL);
 if(!(mysql_real_connect(conn,host,user,pass,db,port,unix_socket,flag)))
 {
@@ -25,6 +28,7 @@ exit(1);
 }
 printf("\nHELLO SHREYANSH!----- you are successfully connected to mysql server------\n\n");
 mysql_query(conn,"use operator");
+mysql_query(conn,"insert into clothes values(name)");
 mysql_query(conn,"select * from clothes");
 res=mysql_store_result(conn);
 while(col=mysql_fetch_row(res))
