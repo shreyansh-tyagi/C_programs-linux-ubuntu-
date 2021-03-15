@@ -18,8 +18,8 @@ MYSQL *conn;
 MYSQL_RES *res;
 MYSQL_ROW col;
 char name[50];
-//int len = query_len + name_len + 1;
-char * insert_query = (char *) malloc(4*sizeof(name));
+int len = name+ 1;
+char * insert_query = (char *) malloc(len);
 printf("\nenter the name: ");
 scanf("%s",name);
 conn=mysql_init(NULL);
@@ -31,7 +31,8 @@ exit(1);
 printf("\nHELLO SHREYANSH!----- you are successfully connected to mysql server------\n\n");
 mysql_query(conn,"use operator");
 //mysql_query(conn,"insert into clothes values(name)");
-snprintf(insert_query, "INSERT INTO clothes VALUES('%s')", name);
+snprintf(insert_query, len, "INSERT INTO clothes VALUES('%s')", name);
+
 mysql_query(conn,"select * from clothes");
 res=mysql_store_result(conn);
 while(col=mysql_fetch_row(res))
