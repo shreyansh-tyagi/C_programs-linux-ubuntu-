@@ -28,7 +28,7 @@ if(!(mysql_real_connect(conn,host,user,pass,db,port,unix_socket,flag)))
 fprintf(stderr,"\nError: %s [%d]\n", mysql_error(conn),mysql_errno(conn));
 exit(1);
 }
-printf("\nHELLO SHREYANSH!----- you are successfully connected to mysql server------\n\n");
+printf("\nHELLO SHREYANSH!----- you are now successfully connected to mysql server------\n\n");
 mysql_query(conn,"use operator");
 //mysql_query(conn,"insert into clothes values(name)");
 snprintf(insert_query, len, "INSERT INTO clothes VALUES(name)");
