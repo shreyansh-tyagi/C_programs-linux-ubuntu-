@@ -29,7 +29,8 @@ exit(1);
 }
 printf("\nHELLO SHREYANSH!----- you are now successfully connected to mysql server------\n\n");
 mysql_query(conn,"use operator");
-sprintf(name,"insert into clothes (f_name) values(%s,'name')",name);
+mysql_query(conn,"insert into clothes (f_name) values(name)");
+mysql_query(conn,"delete from clothes where f_name='name' ");
 
 mysql_query(conn,"select * from clothes");
 res=mysql_store_result(conn);
