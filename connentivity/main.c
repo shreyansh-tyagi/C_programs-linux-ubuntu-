@@ -14,7 +14,12 @@ unsigned int flag=0;
 
 int main()
 {
-    MYSQL 
+    MYSQL *connection;
+    MYSQL_RES *result;
+    MYSQL_ROW *column;
+    connection=mysql_init(NULL);
+    if(!())
+
     
     printf();
 }
