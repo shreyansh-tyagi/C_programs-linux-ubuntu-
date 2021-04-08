@@ -13,7 +13,7 @@ static char *unix_socket=NULL;
 unsigned int flag=0;
 
 int main()
-{
+{   
 MYSQL *conn;
 MYSQL_RES *res;
 MYSQL_ROW col;

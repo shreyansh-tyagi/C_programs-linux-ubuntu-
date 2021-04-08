@@ -25,4 +25,6 @@ int main()
     }
    printf("HELLO!--- Shreyansh you are successfully connected to the database---");
    mysql_query(connection,"use operator");
+   mysql_query(connection,"show tables");
+   mysql_query(connection,"")
 }
