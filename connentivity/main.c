@@ -28,5 +28,12 @@ int main()
    mysql_query(connection,"show tables");
    mysql_query(connection,"select * from f_name");
    result=mysql_store_result(connection);
-   printf("\n")
+   printf("\nF_NAME\n");
+   while(column=mysql_fetch_row(result))
+   {
+       printf("%s",column[0]);
+   }
+   mysql_free_result(result);
+   mysql_close(connection);
+   return EXIT_SUCCESS;
 }
