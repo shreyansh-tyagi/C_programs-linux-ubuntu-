@@ -18,8 +18,10 @@ int main()
     MYSQL_RES *result;
     MYSQL_ROW *column;
     connection=mysql_init(NULL);
-    if(!())
-
-    
-    printf();
+    if(!(mysql_real_connect(connection,host,user,pass,db,unix_socket,port,flag)))
+    {
+        fprintf(stderr,"\nError: %s [%d]\n",mysql_error(connection),mysql_errno(connection));
+        exit(1);
+    }
+   printf("HELLO!--- Shreyansh you are successfully connected to the database---");
 }
