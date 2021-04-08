@@ -26,5 +26,7 @@ int main()
    printf("HELLO!--- Shreyansh you are successfully connected to the database---");
    mysql_query(connection,"use operator");
    mysql_query(connection,"show tables");
-   mysql_query(connection,"s")
+   mysql_query(connection,"select * from f_name");
+   result=mysql_store_result(connection);
+   printf("\n")
 }
