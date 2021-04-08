@@ -16,7 +16,7 @@ int main()
 {
     MYSQL *connection;
     MYSQL_RES *result;
-    MYSQL_ROW *column;
+    MYSQL_ROW column;
     connection=mysql_init(NULL);
     if(!(mysql_real_connect(connection,host,user,pass,db,unix_socket,port,flag)))
     {
@@ -24,4 +24,5 @@ int main()
         exit(1);
     }
    printf("HELLO!--- Shreyansh you are successfully connected to the database---");
+   mysql_query(connection,"use operator");
 }
