@@ -9,7 +9,7 @@ while(True):
         exit()
    # sql="insert into clothes (f_name) values(%s);"
     #vals=(name)
-    mycursor.execute("insert into clothes (f_name) values(%s);",name)
+    mycursor.execute("insert into clothes (f_name) value(%s);",name)
     mydb.commit()
     print('\ndata saved inside the database\n')  
         
