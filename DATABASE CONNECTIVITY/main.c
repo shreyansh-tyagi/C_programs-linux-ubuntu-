@@ -33,14 +33,15 @@ printf("\nHELLO SHREYANSH!----- you are now successfully connected to mysql serv
 mysql_query(conn,"use operator");
 res=mysql_store_result(conn);
 mysql_free_result(res);
-mysql_close(conn);
 fprintf(ptr,"n=%d\n",n);
 for(int i=1;i<=n;i++)
 {
     printf("\nenter the name: ");
+    fflush(stdin);
     scanf("%[^\n]",name);
     fprintf(ptr,"name%d='%s'\n",i,name);
 
 }
+mysql_close(conn);
 return EXIT_SUCCESS;
 }
