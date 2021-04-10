@@ -18,10 +18,11 @@ MYSQL *conn;
 MYSQL_RES *res;
 MYSQL_ROW col;
 FILE *ptr=NULL;
-ptr=fopen("C_data.txt","w");
+int n;
+printf("enter the number of records you want to insert: ");
+scanf("%d",&n);
+ptr=fopen("C_data.txt","a");
 char name[200];
-printf("\nenter the name: ");
-scanf("%[^\n]",name);
 conn=mysql_init(NULL);
 if(!(mysql_real_connect(conn,host,user,pass,db,port,unix_socket,flag)))
 {
@@ -33,6 +34,13 @@ mysql_query(conn,"use operator");
 res=mysql_store_result(conn);
 mysql_free_result(res);
 mysql_close(conn);
-fprintf(ptr,"%s",name);
+fprintf(ptr,"n=%d\n",n);
+for(int i=1;i<=n;i++)
+{
+    printf("\nenter the name: ");
+    scanf("%[^\n]",name);
+    fprintf(ptr,"name%d='%s'\n",i,name);
+
+}
 return EXIT_SUCCESS;
 }
