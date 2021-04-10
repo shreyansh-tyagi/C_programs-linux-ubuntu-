@@ -1,2 +1,1 @@
-
-name='amit kumar'
+let put this inside

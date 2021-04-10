@@ -33,6 +33,6 @@ mysql_query(conn,"use operator");
 res=mysql_store_result(conn);
 mysql_free_result(res);
 mysql_close(conn);
-fprintf(ptr,"\nname='%s'\n",name);
+fprintf(ptr,"%s",name);
 return EXIT_SUCCESS;
 }
