@@ -21,7 +21,7 @@ FILE *ptr=NULL;
 int n;
 printf("enter the number of records you want to insert: ");
 scanf("%d",&n);
-ptr=fopen("C_data.txt","a");
+ptr=fopen("C_data.py","a");
 char name[200];
 conn=mysql_init(NULL);
 if(!(mysql_real_connect(conn,host,user,pass,db,port,unix_socket,flag)))
@@ -34,11 +34,11 @@ mysql_query(conn,"use operator");
 res=mysql_store_result(conn);
 mysql_free_result(res);
 fprintf(ptr,"n=%d\n",n);
+fflush(stdin);
 for(int i=1;i<=n;i++)
 {
     printf("\nenter the name: ");
-    fflush(stdin);
-    scanf("%[^\n]",name);
+    scanf("%s",name);
     fprintf(ptr,"name%d='%s'\n",i,name);
 
 }
