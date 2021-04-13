@@ -16,14 +16,14 @@ int main()
 {
     MYSQL *connection;
     MYSQL_RES *result;
-    MYSQL_ROW *col;
+    MYSQL_ROW col;
     connection=mysql_init(NULL);
     if(!(mysql_real_connect(connection,host,user,pass,database,port,unix_socket,flags)))
     {
         fprintf(stderr,"ERROR:%s ,[%d]\n",mysql_error(connection),mysql_errno(connection));
         exit(1);
     }
-    printf("-----\nHELLO SHREYANSH, you are successfully connected to database-----\n");
+    printf("\n-----HELLO SHREYANSH, you are successfully connected to database-----\n");
     mysql_query(connection,"use employee;");
     mysql_query(connection,"select * from e_data;");
     result=mysql_store_result(connection);
