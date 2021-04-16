@@ -48,8 +48,6 @@ int main()
     scanf("%[^\n]",e_name);
     printf("\nenter the employee address: ");
     scanf("%[^\n]",e_address);
-    printf("\nenter the employee gender 'male' or 'female': ");
-    scanf("%[^\n]",e_gender);
     printf("\nenter the employee department: ");
     scanf("%[^\n]",e_dept);
     fprintf(ptr,"e_id=%d\n",e_id);
@@ -60,8 +58,11 @@ int main()
     fprintf(ptr,"e_dept='%s'\n",e_dept);
     }
     else{
-    printf("please enter the valid age");}
-    if(e_gender=='male'||'female') 
+    printf("please enter the valid age");
+    }
+    printf("\nenter the employee gender 'male' or 'female': ");
+    scanf("%[^\n]",e_gender);
+    if((e_gender=="male")||(e_gender=="female")) 
     {
         fprintf(ptr,"e_gender='%s'\n",e_gender);
     }
