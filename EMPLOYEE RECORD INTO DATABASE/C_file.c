@@ -56,6 +56,8 @@ int main()
     fprintf(ptr,"e_name='%s'\n",e_name);
     fprintf(ptr,"e_address='%s'\n",e_address);
     fprintf(ptr,"e_age=%d\n",e_age);
+    fprintf(ptr,"e_salary=%d\n",e_salary);
+    fprintf(ptr,"e_dept='%s'\n",e_dept);
     }
     else{
     printf("please enter the valid age");}
@@ -63,6 +65,9 @@ int main()
     {
         fprintf(ptr,"e_gender='%s'\n",e_gender);
     }
+    else{
+        printf("\nplease enter the valid gender");
+    } 
     mysql_free_result(result);
     mysql_close(connection);
     return EXIT_SUCCESS;
