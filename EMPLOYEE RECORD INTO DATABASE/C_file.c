@@ -17,6 +17,10 @@ int main()
     MYSQL *connection;
     MYSQL_RES *result;
     MYSQL_ROW col;
+    FILE *ptr=NULL;
+    int e_id,e_age,e_salary;
+    char e_name[200],e_address[200],e_gender[20],e_dept[200];
+    ptr=fopen("Employee_data.py","w");
     connection=mysql_init(NULL);
     if(!(mysql_real_connect(connection,host,user,pass,database,port,unix_socket,flags)))
     {
@@ -32,6 +36,14 @@ int main()
     {
         printf("%s\t\t%s\t\t%s\t\t%s\t\t%s\t\t%s\t\t%s\t\n\n",col[0],col[1],col[2],col[3],col[4],col[5],col[6]);
     }
+    printf("enter the employee id: ");
+    scanf("%d",&e_id);
+    printf("enter the employee age: ");
+    scanf("%d",&e_age);
+    printf("enter the employye salary: ");
+    scanf("%d",&e_salary);
+    printf("enter the employee name: ");
+    scanf("%[^\n]",e_name);
     mysql_free_result(result);
     mysql_close(connection);
     return EXIT_SUCCESS;
