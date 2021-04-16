@@ -44,30 +44,33 @@ int main()
     if(e_age<=105){
     printf("\nenter the employye salary: ");
     scanf("%d",&e_salary);
-    printf("\nenter the employee name: ");
-    scanf("%[^\n]",e_name);
-    printf("\nenter the employee address: ");
-    scanf("%[^\n]",e_address);
-    printf("\nenter the employee department: ");
-    scanf("%[^\n]",e_dept);
     fprintf(ptr,"e_id=%d\n",e_id);
-    fprintf(ptr,"e_name='%s'\n",e_name);
-    fprintf(ptr,"e_address='%s'\n",e_address);
     fprintf(ptr,"e_age=%d\n",e_age);
     fprintf(ptr,"e_salary=%d\n",e_salary);
-    fprintf(ptr,"e_dept='%s'\n",e_dept);
     }
     else{
     printf("please enter the valid age");
+    exit(1);
     }
     printf("\nenter the employee gender 'male' or 'female': ");
     scanf("%[^\n]",e_gender);
     if((e_gender=="male")||(e_gender=="female")) 
     {
         fprintf(ptr,"e_gender='%s'\n",e_gender);
+        fflush(stdin);
+        printf("\nenter the employee name: ");
+        scanf("%[^\n]",e_name);
+        printf("\nenter the employee address: ");
+        scanf("%[^\n]",e_address);
+        printf("\nenter the employee department: ");
+        scanf("%[^\n]",e_dept);
+        fprintf(ptr,"e_name='%s'\n",e_name);
+        fprintf(ptr,"e_address='%s'\n",e_address);
+        fprintf(ptr,"e_dept='%s'\n",e_dept);
     }
     else{
         printf("\nplease enter the valid gender");
+        exit(1);
     } 
     mysql_free_result(result);
     mysql_close(connection);
