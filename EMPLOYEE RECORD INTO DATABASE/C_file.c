@@ -19,7 +19,7 @@ int main()
     MYSQL_ROW col;
     FILE *ptr=NULL;
     int e_id,e_age,e_salary;
-    char e_name[200],e_address[200],e_gender[20],e_dept[200];
+    char e_name[200],e_address[200],e_gender[200],e_dept[200];
     ptr=fopen("Employee_data.py","w");
     connection=mysql_init(NULL);
     if(!(mysql_real_connect(connection,host,user,pass,database,port,unix_socket,flags)))
@@ -41,6 +41,9 @@ int main()
     scanf("%d",&e_id);
     printf("\nenter the employee age: ");
     scanf("%d",&e_age);
+    fflush(stdin);
+    printf("\nenter the employee gender 'male' or 'female':");
+    scanf("%s",e_gender);
     if(e_age<=105){
     printf("\nenter the employye salary: ");
     scanf("%d",&e_salary);
@@ -52,26 +55,16 @@ int main()
     printf("please enter the valid age");
     exit(1);
     }
-    printf("\nenter the employee gender 'male' or 'female': ");
-    scanf("%[^\n]",e_gender);
-    if((e_gender=="male")||(e_gender=="female")) 
-    {
         fprintf(ptr,"e_gender='%s'\n",e_gender);
-        fflush(stdin);
         printf("\nenter the employee name: ");
-        scanf("%[^\n]",e_name);
+        scanf("%s",e_name);
         printf("\nenter the employee address: ");
-        scanf("%[^\n]",e_address);
+        scanf("%s",e_address);
         printf("\nenter the employee department: ");
-        scanf("%[^\n]",e_dept);
+        scanf("%s",e_dept);
         fprintf(ptr,"e_name='%s'\n",e_name);
         fprintf(ptr,"e_address='%s'\n",e_address);
         fprintf(ptr,"e_dept='%s'\n",e_dept);
-    }
-    else{
-        printf("\nplease enter the valid gender");
-        exit(1);
-    } 
     mysql_free_result(result);
     mysql_close(connection);
     return EXIT_SUCCESS;
