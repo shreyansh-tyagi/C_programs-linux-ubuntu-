@@ -1,5 +1,5 @@
-e_id='2'
-e_age=21
+e_id='12'
+e_age=22
 e_salary=23000
 e_gender='female'
 e_name='alexaa'
