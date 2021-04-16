@@ -27,7 +27,7 @@ int main()
     mysql_query(connection,"use employee;");
     mysql_query(connection,"select * from e_data;");
     result=mysql_store_result(connection);
-    printf("\nID\t\tNAME\t\tADDRESS\t\tAGE\t\tGENDER\t\tSALARY\t\tDEPARTMENT\t\n\n");
+    printf("\n\nID\t\tNAME\t\tADDRESS\t\tAGE\t\tGENDER\t\tSALARY\t\tDEPARTMENT\t\n\n\n");
     while(col=mysql_fetch_row(result))
     {
         printf("%s\t\t%s\t\t%s\t\t%s\t\t%s\t\t%s\t\t%s\t\n\n",col[0],col[1],col[2],col[3],col[4],col[5],col[6]);
