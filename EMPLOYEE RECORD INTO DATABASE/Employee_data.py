@@ -1,7 +1,7 @@
-e_id='12'
-e_age=22
-e_salary=23000
-e_gender='female'
-e_name='alexaa'
-e_address='bangkok'
-e_dept='data_scientist'
+e_id='13'
+e_age=31
+e_salary=34000
+e_gender='male'
+e_name='albin'
+e_address='mumbai'
+e_dept='sales'
