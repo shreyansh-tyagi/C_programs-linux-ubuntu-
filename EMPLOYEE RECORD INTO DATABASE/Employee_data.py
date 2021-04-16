@@ -1,7 +1,7 @@
-e_id=11
+e_id='2'
 e_age=21
-e_salary=12000
-e_gender='male'
-e_name='surya'
-e_address='mumbai'
-e_dept='finance'
+e_salary=23000
+e_gender='female'
+e_name='alexaa'
+e_address='bangkok'
+e_dept='data_scientist'
