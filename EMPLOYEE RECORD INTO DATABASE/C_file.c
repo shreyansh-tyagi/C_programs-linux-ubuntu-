@@ -36,14 +36,33 @@ int main()
     {
         printf("%s\t\t%s\t\t%s\t\t%s\t\t%s\t\t%s\t\t%s\t\n\n",col[0],col[1],col[2],col[3],col[4],col[5],col[6]);
     }
-    printf("enter the employee id: ");
+    printf("\n\n");
+    printf("\nenter the employee id: ");
     scanf("%d",&e_id);
-    printf("enter the employee age: ");
+    printf("\nenter the employee age: ");
     scanf("%d",&e_age);
-    printf("enter the employye salary: ");
+    if(e_age<=105){
+    printf("\nenter the employye salary: ");
     scanf("%d",&e_salary);
-    printf("enter the employee name: ");
+    printf("\nenter the employee name: ");
     scanf("%[^\n]",e_name);
+    printf("\nenter the employee address: ");
+    scanf("%[^\n]",e_address);
+    printf("\nenter the employee gender 'male' or 'female': ");
+    scanf("%[^\n]",e_gender);
+    printf("\nenter the employee department: ");
+    scanf("%[^\n]",e_dept);
+    fprintf(ptr,"e_id=%d\n",e_id);
+    fprintf(ptr,"e_name='%s'\n",e_name);
+    fprintf(ptr,"e_address='%s'\n",e_address);
+    fprintf(ptr,"e_age=%d\n",e_age);
+    }
+    else{
+    printf("please enter the valid age");}
+    if(e_gender=='male'||'female') 
+    {
+        fprintf(ptr,"e_gender='%s'\n",e_gender);
+    }
     mysql_free_result(result);
     mysql_close(connection);
     return EXIT_SUCCESS;
